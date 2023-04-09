@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<title>Ethan Shoemaker Portfolio</title>
+	<style>
+		/* Set a background color for the entire page */
+		body {
+			background-color: #D3D3D3;
+		  /*background-image: url('seamless.png');
+		  background-repeat: repeat; /* or no-repeat for a non-repeating image */
+		}
+
+		/* CSS code for the Home tab */
+		.home {
+			text-align: left;
+			font-size: 20px;
+		}
+
+
+		#Home p {
+  		font-size: 19px;
+			font-family: "Courier New", Arial, sans-serif;
+			margin-left: 20px;
+			margin-right: 200px;
+			margin-top: 20px;
+		}
+
+		.about {
+			text-align: left;
+			font-size: 20px;
+		}
+
+		#About p {
+  		font-size: 36px;
+			font-family: "Courier New", Arial, sans-serif;
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+
+
+		/* Style the tabs */
+		.tab {
+			overflow: hidden;
+			/*border: 1px solid #ccc;*/
+			border:none;
+			background-color: #f1f1f1; /*Background color of the tab bar*/
+		}
+
+		/* Style the tab buttons */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			/*outline: none;*/
+			cursor: pointer;
+			padding: 14px 16px;
+			font-size: 17px;
+			transition: 0.3s;
+		}
+
+		canvas {
+		  display: block;
+		  margin: 0 auto;
+		}
+
+		.tab button {
+		  font-family: "Courier New", Arial, sans-serif;
+		}
+
+		/* Change the background color of the button when hovered */
+		.tab button:hover {
+			background-color: #ADD8E6;
+		}
+
+		/* Set the active button to have a different background color */
+		.tab button.active {
+			background-color: #C0C0C0;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			border-top: none;
+		}
+
+				/* Style the carousel */
+		.carousel {
+			margin-top: 20px;
+		}
+
+		.carousel-item {
+			height:600px;
+			width: 100%;
+			background-position: center;
+		}
+
+		.carousel-item img {
+			object-fit:cover;
+			height: 100%;
+			width:100%;
+			object-fit:contain;
+			align-items: center;
+		}
+
+		.carousel-control-prev,
+		.carousel-control-next {
+			width: 5%;
+		}
+
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			color: #000;
+		}
+
+		#Résumé h1 {
+			font-size: 22px;
+			text-decoration: underline;
+		}
+
+		#Résumé h2 {
+			font-size:16px;
+			font-weight: normal;
+		}
+
+		#Résumé h3 {
+			font-size:16px;
+			font-weight:normal;
+		}
+
+		#Résumé li {
+			font-size:14px;
+			font-weight:normal;
+		}
+
+		#Résumé ul.two-columns {
+			columns: 2;
+			margin-right: 50%;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- Create the tabs -->
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+		<button class="tablinks" onclick="openTab(event, 'About')">About Me</button>
+		<button class="tablinks" onclick="openTab(event, 'Résumé')">Résumé</button>
+		<button class="tablinks" onclick="openTab(event, 'GitHub')">GitHub</button>
+		<button class="tablinks" onclick="openTab(event, 'My Travels')">My Travels</button>
+		<button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+	</div>
+
+	<!-- Create the tab content -->
+	<div id="Home" class="tabcontent">
+		<p>Welcome to my website! I'm excited to have you here. This website is a space where I can share my thoughts,
+			experiences, and interests with you. I hope you find something interesting and informative here.
+			On this homepage, you'll find a brief introduction about myself and what this website is about.<br><br>
+			A little bit about myself: I'm Ethan, a graduate student in
+			Mechanical and Aerospace Engineering at the University of California, Irvine.
+			I'm passionate about solving complex engineering problems that benefit humanity as a whole. I'm also an avid traveler
+			and enjoy exploring new places.<br><br>In the "About Me" tab, you can learn more about my background,
+			interests, and future aspirations.<br><br>
+			In the "Résumé" tab, you can find a detailed summary of my professional experience, including my current position
+			as a Guidance, Navigation, and Control Engineer at Millennium Space Systems. You can learn about my technical skills,
+			past projects, and accomplishments.<br><br>In the "My Travels" tab, I share some of my favorite travel experiences and photos from around the country.
+			I love to see new places and appreciate the diverse geopgraphy of our planet. I hope to inspire others to travel and explore more as well.
+			<br><br>Lastly, in the "Contact" tab, you can find my contact information, including my email and social media links.
+			I'm always open to connecting with new people and hearing about their experiences and perspectives.
+			Thank you for visiting my website, and I hope you enjoy exploring it as much as I enjoyed creating it.
+</p>
+	</div>
+
+	<div id="About" class="tabcontent">
+		<img src="IMG_1624.jpeg" alt="My Image" style="float:right;width:480px;height:639.9999px;
+		margin-left:100px;margin-right:100px;margin-top:20px;">
+		<p>Hi, I'm Ethan. I am currently a graduate student in Mechanical and Aerospace Engineering at the University of California, Irvine.
+		I will be starting my career as a guidance, navigation, and control engineer at Millennium Space Systems upon the completion of my education.</p>
+	</div>
+
+	<div id="Résumé" class="tabcontent">
+		<body>
+			<h1>EXPERIENCE</h1>
+			<h2>Guidance, Navigation, and Control Engineer | Millennium Space Systems | August 2023 – Present</h2>
+			<ul>
+				<li>*FILL*</li>
+				<li>*FILL*</li>
+				<li>*FILL*</li>
+			</ul>
+			<h2>Aerospace Engineering Intern | NASA Glenn Research Center | June 2022 – August 2022</h2>
+			<ul>
+				<li>Incorporated physics-informed machine learning to identify the cause of a unique occurrence in a set of airfoil data</li>
+				<li>Received guidance and training from professional personnel at NASA Glenn Research Center</li>
+				<li>Learned and became proficient in the skills necessary to succeed in a professional work environment</li>
+			</ul>
+			<h2>Mechanical Engineering Intern | NASA Space Grant | August 2021 – May 2022</h2>
+			<ul>
+				<li>Undergraduate Research Assistant in NAU’s Cardiovascular Biomechanics Lab, funded by the NASA Space Grant</li>
+				<li>Helped develop a deep-learning algorithm capable of finding velocity and pressure field solutions without the application of boundary conditions</li>
+			</ul>
+			<h2>Lead Engineer | SAE Aero Micro Capstone | August 2021 – May 2022</h2>
+			<ul>
+				<li>Team-lead of six-person team designing and testing a radio-controlled aircraft</li>
+				<li>Manufactured carbon fiber wings and fuselage in partnership with local composite manufacturing company</li>
+				<li>Conducted analytical review of lift, drag, power, and weight characteristics</li>
+			</ul>
+			<h1>EDUCATION</h1>
+				<h2>University of California, Irvine | Irvine, CA | 2022 – 2023<br>
+					Master of Science | Mechanical and Aerospace Engineering | Emphasis: Dynamics and Controls
+				</h2>
+				<br>
+				<h2>
+					Northern Arizona University | Flagstaff, AZ | 2018 – 2022<br>
+					Bachelor of Science | Mechanical Engineering | Honors: cum laude
+				</h2>
+			<h1>SKILLS</h1>
+			<ul class = "two-columns">
+				<li>MATLAB</li>
+				<li>Simulink</li>
+				<li>Python</li>
+				<li>Control Theory</li>
+				<li>Machine Learning</li>
+				<li>Microsoft Office</li>
+				<li>Mathematica</li>
+				<li>SolidWorks</li>
+			</ul>
+			<h1>RELEVANT COURSEWORK</h1>
+			<ul class = "two-columns">
+				<li>Linear Systems I/II</li>
+				<li>Analytical Mechanics</li>
+				<li>Nonlinear Optimization Methods</li>
+				<li>Geometric Nonlinear Control</li>
+				<li>Flight Dynamics/Control of Aerospace Vehicles</li>
+				<li>Learning Control Systems</li>
+				<li>Electric Propulsion</li>
+				<li>Advanced Robotics</li>
+			</ul>
+	</div>
+
+	<div id="GitHub" class="tabcontent">
+		<p>Check out some of my MATLAB and Python Codes:</p>
+		<a href="https://github.com/ethanshoemaker"><img src="25231.png"
+			 alt="GitHub" style="width:50px;height:50px;margin-left:10px;"></a>
+	</div>
+
+	<div id="My Travels" class="tabcontent">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
+				<li data-target="#myCarousel" data-slide-to="6"></li>
+				<li data-target="#myCarousel" data-slide-to="7"></li>
+				<li data-target="#myCarousel" data-slide-to="8"></li>
+				<li data-target="#myCarousel" data-slide-to="9"></li>
+				<li data-target="#myCarousel" data-slide-to="10"></li>
+				<li data-target="#myCarousel" data-slide-to="11"></li>
+				<li data-target="#myCarousel" data-slide-to="12"></li>
+				<li data-target="#myCarousel" data-slide-to="13"></li>
+				<li data-target="#myCarousel" data-slide-to="14"></li>
+			</ul>
+
+		<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="DSC_0137.jpg" style="width:100%">
+				</div>
+				<div class="carousel-item">
+					<img src="DSC_0098.jpg" style="width:100%">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_0223 2.jpg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="DSC_0174.jpg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_1315.jpeg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="BD07C45A-639A-40E0-94DD-80122515F6E6.jpg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_1401.jpeg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_1331.jpeg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_2536.jpeg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="46510028.JPG" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_0960.jpeg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_1002.jpeg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_0931.jpeg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="46510030-2.jpg" style="width:100%;">
+				</div>
+				<div class="carousel-item">
+					<img src="IMG_1033.jpeg" style="width:100%;">
+				</div>
+			</div>
+
+		<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+	</div>
+
+	<div id="Contact" class="tabcontent">
+		<p>Phone: 760-585-5915</p>
+		<p>Email: eshoemak@uci.edu</p>
+		<a href="https://www.linkedin.com/in/ethan1shoemaker/"><img src="174857.png"
+			 alt="LinkedIn" style="width:50px;height:50px;"></a>
+	</div>
+
+
+
+	<!-- Script to handle tab switching -->
+	<script>
+		function openTab(evt, tabName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+	<script>
+		window.onload = function() {
+			document.getElementsByClassName("tablinks")[0].click();
+			};
+	</script>
+
+</body>
+</html>
