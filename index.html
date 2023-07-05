@@ -46,7 +46,7 @@
   		font-size: 18px;
 			font-family: "Courier New", Arial, sans-serif;
 			margin-left: 20px;
-			margin-top: 20px;
+			margin-top: 10px;
 			word-wrap: normal;
 		}
 
@@ -59,7 +59,7 @@
   		font-size: 18px;
 			font-family: "Courier New", Arial, sans-serif;
 			margin-left: 20px;
-			margin-top: 20px;
+			margin-top: 10px;
 		}
 
 
@@ -149,6 +149,9 @@
 			color: #000;
 		}
 
+		#Résumé {
+			margin-top:10px;
+		}
 
 		#Résumé h1 {
 			font-size: 22px;
@@ -175,6 +178,16 @@
 			margin-right: 50%;
 		}
 
+		#ReadingList p {
+			font-size: 18px;
+		}
+
+		#ReadingList {
+			margin-top:10px;
+			margin-right: 33%;
+			margin-left: 1%;
+		}
+
 	</style>
 </head>
 <body>
@@ -183,8 +196,8 @@
 		<button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
 		<button class="tablinks" onclick="openTab(event, 'About')">About Me</button>
 		<button class="tablinks" onclick="openTab(event, 'Résumé')">Résumé</button>
-		<button class="tablinks" onclick="openTab(event, 'My Travels')">My Travels</button>
-		<button class="tablinks" onclick="openTab(event, 'Reading List')">Reading List</button>
+		<button class="tablinks" onclick="openTab(event, 'MyTravels')">My Travels</button>
+		<button class="tablinks" onclick="openTab(event, 'ReadingList')">Reading List</button>
 		<button class="tablinks" onclick="openTab(event, 'GitHub')">GitHub</button>
 		<button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
 	</div>
@@ -281,7 +294,7 @@
 			</ul>
 	</div>
 
-	<div id="My Travels" class="tabcontent">
+	<div id="MyTravels" class="tabcontent">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ul class="carousel-indicators">
@@ -361,8 +374,17 @@
 		</div>
 	</div>
 
-	<div id="Reading List" class="tabcontent">
-		<p>Some of my favorite books:</p>
+	<div id="ReadingList" class="tabcontent">
+		<p>This a brief list  of some of my favorite books. I have intentionally listed only books
+		that are accessible by a general audience. So, although some of my favorite books are deeply mathematical,
+		they are not listed here.</p><br>
+		<li><b><i>The Code Book</i> by Simon Singh:</b> An excellent book for anyone interested in mathematics,
+		cryptography, or history. <i>The Code Book</i> examines the entire history of the ongoing war between
+		cryptographers and cryptanalysts from ancient Egypt to modern quantum encryption techniques. Those fascinated with
+		World War II history will particularly enjoy the chapters on the Navajo Code Talkers and the German Enigma.</li><br>
+		<li><b><i>Skunk Works</i> by Ben Rich:</b> Any engineer will enjoy this book outlining the development of some of the most advanced
+		aircraft in the history of The United States. Written by Ben Rich, former head of Lockheed Martin's Skunk Works division, this book
+		provides an excellent "first person" view of information that was once highly classified due to national security concerns.</li>
 	</div>
 
 	<div id="GitHub" class="tabcontent">
