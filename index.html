@@ -126,31 +126,31 @@
 		} */
 
 
-		#Résumé {
+		#Resume {
 			margin-top:10px;
 		}
 
-		#Résumé h1 {
+		#Resume h1 {
 			font-size: 22px;
 			text-decoration: underline;
 		}
 
-		#Résumé h2 {
+		#Resume h2 {
 			font-size:16px;
 			font-weight: normal;
 		}
 
-		#Résumé h3 {
+		#Resume h3 {
 			font-size:16px;
 			font-weight:normal;
 		}
 
-		#Résumé li {
+		#Resume li {
 			font-size:14px;
 			font-weight:normal;
 		}
 
-		#Résumé ul.two-columns {
+		#Resume ul.two-columns {
 			columns: 2;
 			margin-right: 50%;
 		}
@@ -169,10 +169,27 @@
 			font-size: 20px;
 		}
 
+		#AYearWithFeynman	{
+			margin-right: 33%;
+			margin-left: 1%;
+		}
+
 		.imageContainer {
     display: flex;
     flex-wrap: wrap;
 		}
+
+				/* Center the MathML element */
+		math {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  text-align: center;
+		  width: 100%;  /* or a specific width */
+		  padding-top: 20px; /* Optional: add some spacing above the MathML */
+		  padding-bottom: 20px; /* Optional: add some spacing below the MathML */
+		}
+
 
 
 	</style>
@@ -182,7 +199,7 @@
 	<div class="tab">
 		<button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
 		<button class="tablinks" onclick="openTab(event, 'About')">About Me</button>
-		<button class="tablinks" onclick="openTab(event, 'Résumé')">Résumé</button>
+		<button class="tablinks" onclick="openTab(event, 'Resume')">Résumé</button>
 		<button class="tablinks" onclick="openTab(event, 'MyTravels')">My Travels</button>
 		<button class="tablinks" onclick="openTab(event, 'ReadingList')">Reading List</button>
 		<button class="tablinks" onclick="openTab(event, 'AYearWithFeynman')">A Year with Feynman</button>
@@ -224,7 +241,7 @@
 		I consider this to be one of the most rewarding experiences of my life.</p>
 	</div>
 
-	<div id="Résumé" class="tabcontent">
+	<div id="Resume" class="tabcontent">
 		<body>
 			<h1>EXPERIENCE</h1>
 			<h2>Guidance, Navigation, and Control Engineer | Millennium Space Systems | August 2023 – Present</h2>
@@ -397,9 +414,119 @@
 
 	<div id="AYearWithFeynman" class="tabcontent">
 		<p>In 2025 I am planning to read one chapter per week out of "The Feynman Lectures on Physics" and upload a brief blog-style
-			post here discussing what I learned, what I found intersting, and initial confusions I had.
+			post here discussing what I learned, what I found intersting, and initial confusions I had.</p>
 		<h3><b>Week 1:</b> <i>Volume II, Chapter 1 - Electromagnetism</i></h3>
-	</div>
+		<p>In my job as a spacecraft engineer, I am very familiar with understanding gravity and how it drives the motion of objects. However,
+			I came to realize that I don't have a deep understanding of any of the other 3 fundamental forces of nature (electromagnetism and the strong/weak
+			nuclear forces). I decided it would be useful for me to start off the year by reading Feynman's introduction to electromagnetism. Because
+			most things in nature have a net-neutral charge, we don't often have an appeciation for just how strong the electromagnetic force is. Feynman
+			states that if you were standing at arm's length from another person and you each possessed just <i>one percent</i> more electrons than
+			protons, the repulsive force would be enough to lift a "weight" equal to that of the entire earth.</p>
+		<p>From this chapter, I have several main takeaways. First, the force on a charge <i>q</i> moving at velocity <b><i>v</i></b> (which we know from experiment) is given
+			by</p>
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <mrow>
+			    <mstyle mathvariant="bold" fontstyle="italic">
+			      <mi>F</mi>
+			    </mstyle>
+			    <mo>=</mo>
+			    <mi>q</mi>
+			    <mo>(</mo>
+			    <mstyle mathvariant="bold" fontstyle="italic">
+			      <mi>E</mi>
+			    </mstyle>
+			    <mo>+</mo>
+			    <mrow>
+			      <mstyle mathvariant="bold" fontstyle="italic">
+			        <mi>v</mi>
+			      </mstyle>
+			      <mo>&times;</mo> <!-- Cross product symbol -->
+			      <mstyle mathvariant="bold" fontstyle="italic">
+			        <mi>B</mi>
+			      </mstyle>
+			    </mrow>
+			    <mo>)</mo>
+			  </mrow>
+			</math>
+			<p>where <b><i>E</b></i> and <b><i>B</b></i> are the electric and magnetic fields. Clearly, in order to resolve the force on a charge,
+				we must have knowledge of these two fields. This is where the four Maxwell equations come into play.</p>
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 1: grad dot E(vector) = rho / epsilon naught -->
+			  <mrow>
+			    <mo>&Del;</mo> <!-- Gradient symbol -->
+			    <mo>&sdot;</mo> <!-- Dot -->
+			    <mi mathvariant="bold-italic">E</mi> <!-- Bold-italic vector E -->
+			    <mo>=</mo>
+			    <mfrac>
+			      <mi>&rho;</mi> <!-- Greek letter rho -->
+			      <mi>&#x03B5;&#x2080;</mi> <!-- Greek letter epsilon naught -->
+			    </mfrac>
+			  </mrow>
+			</math>
+
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 2: grad dot B(vector) = 0 -->
+			  <mrow>
+			    <mo>&#x2207;</mo> <!-- Gradient symbol -->
+			    <mo>&sdot;</mo> <!-- Dot -->
+			    <mi mathvariant="bold-italic">B</mi> <!-- Bold-italic vector B -->
+			    <mo>=</mo>
+			    <mn>0</mn>
+			  </mrow>
+			</math>
+
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 3: curl of E(vector) = - partial derivative of B(vector) with respect to t -->
+			  <mrow>
+			    <mo>&Del;</mo> <!-- Gradient symbol -->
+			    <mo>&times;</mo> <!-- Cross product symbol -->
+			    <mi mathvariant="bold-italic">E</mi> <!-- Bold-italic vector E -->
+			    <mo>=</mo>
+			    <mo>-</mo>
+			    <mfrac>
+						<mrow>
+							<mo>&part;</mo>
+							<mi mathvariant="bold-italic">B</mi> <!-- Bold-italic vector B -->
+						</mrow>
+						<mrow>
+			      	<mo>&part;</mo> <!-- Partial derivative symbol -->
+							<mi>t</mi>
+						</mrow>
+			    </mfrac>
+			  </mrow>
+			</math>
+
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 4: curl of B(vector) = mu_naught*(J(vector) + epsilon_naught * partial derivative of E(vector) with respect to t) -->
+			  <mrow>
+			    <mo>&#x2207;</mo> <!-- Gradient symbol -->
+			    <mo>&times;</mo> <!-- Cross product symbol -->
+			    <mi mathvariant="bold-italic">B</mi> <!-- Bold-italic vector B -->
+			    <mo>=</mo>
+			    <mi>&#x03BC;&#x2080;</mi> <!-- Greek letter mu naught -->
+					<mi>(</mi>
+		      <mi mathvariant="bold-italic">J</mi> <!-- Bold-italic vector J -->
+		      <mo>+</mo>
+		      <mi>&#x03B5;&#x2080;</mi> <!-- Greek letter epsilon naught -->
+		      <mfrac>
+						<mrow>
+			        <mo>&#x2202;</mo> <!-- Partial derivative symbol -->
+			        <mi mathvariant="bold-italic">E</mi> <!-- Bold-italic vector E -->
+						</mrow>
+						<mrow>
+							<mo>&part;</mo>
+							<mi>t</mi>
+		      </mfrac>
+					<mi>)</mi>
+				</mrow>
+			</math>
+		<p>One confusion I had initially is thast Maxwell's equations appear to be overdetermined in the sense that they provide 8 equations (two scalar equations and two 3D vector equations)
+			for 6 unknowns. After some research I discovered that it can be shown that any system satisfying the 3rd and 4th equations above
+			also satisfies the 1st and 2nd equations.</p>
+		<p>The fascinating thing about the electromagnetic field to me is that charged particles and each of the two fields are in a constant dance with one
+		another. What I mean by this is that the positions of charges dictate what the electric and magnetic fields look like which dictates the positions of charged
+		particles which dictate what the electric and magnetic fields look like. </p>
+
 
 	<div id="Links" class="tabcontent">
 		<a href="https://www.linkedin.com/in/ethan1shoemaker/"><img src="174857.png"
@@ -410,62 +537,66 @@
 
 	<!-- Script to handle tab switching -->
 	<script>
-	// Open the tab based on the clicked tab
-	function openTab(evt, tabName) {
-		var i, tabcontent, tablinks;
-		// Hide all tab content
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		// Remove the "active" class from all tab buttons
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		// Show the current tab and set it as active
-		document.getElementById(tabName).style.display = "block";
-		evt.currentTarget.className += " active";
+	    function openTab(evt, tabName) {
+	        var i, tabcontent, tablinks;
+	        // Hide all tab content
+	        tabcontent = document.getElementsByClassName("tabcontent");
+	        for (i = 0; i < tabcontent.length; i++) {
+	            tabcontent[i].style.display = "none";
+	        }
+	        // Remove the "active" class from all tab buttons
+	        tablinks = document.getElementsByClassName("tablinks");
+	        for (i = 0; i < tablinks.length; i++) {
+	            tablinks[i].className = tablinks[i].className.replace(" active", "");
+	        }
+	        // Show the current tab and set it as active
+	        document.getElementById(tabName).style.display = "block";
+	        evt.currentTarget.className += " active";
 
-		// Update the URL hash to reflect the active tab
-		window.location.hash = tabName;
-	}
+	        // Update the URL hash to reflect the active tab
+	        window.location.hash = tabName;
 
-	// Handle page load (to open the tab corresponding to the hash, if present)
-	window.addEventListener("load", function() {
-		var tabName = window.location.hash.substring(1); // Get the tab name from the hash
-		if (tabName) {
-			// If there's a hash, open the corresponding tab
-			var tabContent = document.getElementById(tabName);
-			if (tabContent) {
-				var tabButton = document.querySelector(`button[onclick="openTab(event, '${tabName}')"]`);
-				tabButton.click();
-			}
-		} else {
-			// If no hash exists, default to "Home" tab
-			var defaultTabButton = document.querySelector('button[onclick="openTab(event, \'Home\')"]');
-			defaultTabButton.click();
-		}
-	});
+					window.scrollTo(0,0);
+	    }
 
-	// Optional: Handle back/forward navigation using the hash
-	window.addEventListener("hashchange", function() {
-		var tabName = window.location.hash.substring(1); // Get the tab name from the new hash
-		if (tabName) {
-			var tabContent = document.getElementById(tabName);
-			if (tabContent) {
-				var tabButton = document.querySelector(`button[onclick="openTab(event, '${tabName}')"]`);
-				tabButton.click();
-			}
-		}
-	});
+	    // Handle page load (to open the tab corresponding to the hash, if present)
+	    window.addEventListener("load", function() {
+	        var tabName = window.location.hash.substring(1); // Get the tab name from the hash
+	        if (tabName) {
+	            // If there's a hash, open the corresponding tab
+	            var tabContent = document.getElementById(tabName);
+	            if (tabContent) {
+	                // Use a click on the correct tab button corresponding to the hash
+	                var tabButton = document.querySelector(`button[onclick="openTab(event, '${tabName}')"]`);
+	                if (tabButton) {
+	                    tabButton.click();  // Trigger the tab's openTab function
+	                }
+	            }
+	        } else {
+						// No hash present, show the first tab ("Home") by default
+						var firstTabButton = document.querySelector('.tablinks');
+						if (firstTabButton) {
+							firstTabButton.click();
+	        }
+				}
+				window.scrollTo(0,0);
+	    });
+
+	    // Optional: Handle back/forward navigation using the hash
+	    window.addEventListener("hashchange", function() {
+	        var tabName = window.location.hash.substring(1); // Get the tab name from the new hash
+	        if (tabName) {
+	            var tabContent = document.getElementById(tabName);
+	            if (tabContent) {
+	                var tabButton = document.querySelector(`button[onclick="openTab(event, '${tabName}')"]`);
+	                tabButton.click();
+	            }
+	        }
+					window.scrollTo(0,0);
+	    });
 	</script>
 
-	<script>
-		window.onload = function() {
-			document.getElementsByClassName("tablinks")[0].click();
-		}
-	</script>
+
 
 </body>
 </html>
