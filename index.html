@@ -410,24 +410,61 @@
 
 	<!-- Script to handle tab switching -->
 	<script>
-		function openTab(evt, tabName) {
-			var i, tabcontent, tablinks;
-			tabcontent = document.getElementsByClassName("tabcontent");
-			for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
-			}
-			tablinks = document.getElementsByClassName("tablinks");
-			for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace(" active", "");
-			}
-			document.getElementById(tabName).style.display = "block";
-			evt.currentTarget.className += " active";
+	// Open the tab based on the clicked tab
+	function openTab(evt, tabName) {
+		var i, tabcontent, tablinks;
+		// Hide all tab content
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
 		}
+		// Remove the "active" class from all tab buttons
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		// Show the current tab and set it as active
+		document.getElementById(tabName).style.display = "block";
+		evt.currentTarget.className += " active";
+
+		// Update the URL hash to reflect the active tab
+		window.location.hash = tabName;
+	}
+
+	// Handle page load (to open the tab corresponding to the hash, if present)
+	window.addEventListener("load", function() {
+		var tabName = window.location.hash.substring(1); // Get the tab name from the hash
+		if (tabName) {
+			// If there's a hash, open the corresponding tab
+			var tabContent = document.getElementById(tabName);
+			if (tabContent) {
+				var tabButton = document.querySelector(`button[onclick="openTab(event, '${tabName}')"]`);
+				tabButton.click();
+			}
+		} else {
+			// If no hash exists, default to "Home" tab
+			var defaultTabButton = document.querySelector('button[onclick="openTab(event, \'Home\')"]');
+			defaultTabButton.click();
+		}
+	});
+
+	// Optional: Handle back/forward navigation using the hash
+	window.addEventListener("hashchange", function() {
+		var tabName = window.location.hash.substring(1); // Get the tab name from the new hash
+		if (tabName) {
+			var tabContent = document.getElementById(tabName);
+			if (tabContent) {
+				var tabButton = document.querySelector(`button[onclick="openTab(event, '${tabName}')"]`);
+				tabButton.click();
+			}
+		}
+	});
 	</script>
+
 	<script>
 		window.onload = function() {
 			document.getElementsByClassName("tablinks")[0].click();
-			};
+		}
 	</script>
 
 </body>
