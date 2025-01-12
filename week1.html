@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+
+	<title>Ethan Shoemaker's Portfolio</title>
+	<style>
+		/* Set a background color for the entire page */
+		body {
+			background-color: #D3D3D3;
+      margin-left:1%;
+      margin-right:20%;
+      margin-top: 10px;
+		}
+
+				/* Center the MathML element */
+		math {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  text-align: center;
+		  width: 100%;  /* or a specific width */
+		  padding-top: 20px; /* Optional: add some spacing above the MathML */
+		  padding-bottom: 20px; /* Optional: add some spacing below the MathML */
+		}
+
+		h3 {
+			font-size: 20px;
+		}
+
+	</style>
+</head>
+
+  <body>
+    <div>
+			<h3> <b>Week 1:</b> <i>Volume II, Chapter 1 - Electromagnetism</i> </h3>
+    <p>In my job as a spacecraft engineer, I am very familiar with understanding gravity and how it drives the motion of objects. However,
+			I came to realize that I don't have a deep understanding of any of the other 3 fundamental forces of nature (electromagnetism and the strong/weak
+			nuclear forces). I decided it would be useful for me to start off the year by reading Feynman's introduction to electromagnetism. Because
+			most things in nature have a net-neutral charge, we don't often have an appeciation for just how strong the electromagnetic force is. Feynman
+			states that if you were standing at arm's length from another person and you each possessed just <i>one percent</i> more electrons than
+			protons, the repulsive force would be enough to lift a "weight" equal to that of the entire earth.</p>
+		<p>From this chapter, I have several main takeaways. First, the force on a charge <i>q</i> moving at velocity <b><i>v</i></b> (which we know from experiment) is given
+			by</p>
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <mrow>
+			    <mstyle mathvariant="bold" fontstyle="italic">
+			      <mi>F</mi>
+			    </mstyle>
+			    <mo>=</mo>
+			    <mi>q</mi>
+			    <mo>(</mo>
+			    <mstyle mathvariant="bold" fontstyle="italic">
+			      <mi>E</mi>
+			    </mstyle>
+			    <mo>+</mo>
+			    <mrow>
+			      <mstyle mathvariant="bold" fontstyle="italic">
+			        <mi>v</mi>
+			      </mstyle>
+			      <mo>&times;</mo> <!-- Cross product symbol -->
+			      <mstyle mathvariant="bold" fontstyle="italic">
+			        <mi>B</mi>
+			      </mstyle>
+			    </mrow>
+			    <mo>)</mo>
+			  </mrow>
+			</math>
+			<p>where <b><i>E</b></i> and <b><i>B</b></i> are the electric and magnetic fields. Clearly, in order to resolve the force on a charge,
+				we must have knowledge of these two fields. This is where the four Maxwell equations come into play.</p>
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 1: grad dot E(vector) = rho / epsilon naught -->
+			  <mrow>
+			    <mo>&Del;</mo> <!-- Gradient symbol -->
+			    <mo>&sdot;</mo> <!-- Dot -->
+			    <mi mathvariant="bold-italic">E</mi> <!-- Bold-italic vector E -->
+			    <mo>=</mo>
+			    <mfrac>
+			      <mi>&rho;</mi> <!-- Greek letter rho -->
+			      <mi>&#x03B5;&#x2080;</mi> <!-- Greek letter epsilon naught -->
+			    </mfrac>
+			  </mrow>
+			</math>
+
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 2: grad dot B(vector) = 0 -->
+			  <mrow>
+			    <mo>&#x2207;</mo> <!-- Gradient symbol -->
+			    <mo>&sdot;</mo> <!-- Dot -->
+			    <mi mathvariant="bold-italic">B</mi> <!-- Bold-italic vector B -->
+			    <mo>=</mo>
+			    <mn>0</mn>
+			  </mrow>
+			</math>
+
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 3: curl of E(vector) = - partial derivative of B(vector) with respect to t -->
+			  <mrow>
+			    <mo>&Del;</mo> <!-- Gradient symbol -->
+			    <mo>&times;</mo> <!-- Cross product symbol -->
+			    <mi mathvariant="bold-italic">E</mi> <!-- Bold-italic vector E -->
+			    <mo>=</mo>
+			    <mo>-</mo>
+			    <mfrac>
+						<mrow>
+							<mo>&part;</mo>
+							<mi mathvariant="bold-italic">B</mi> <!-- Bold-italic vector B -->
+						</mrow>
+						<mrow>
+			      	<mo>&part;</mo> <!-- Partial derivative symbol -->
+							<mi>t</mi>
+						</mrow>
+			    </mfrac>
+			  </mrow>
+			</math>
+
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+			  <!-- Equation 4: curl of B(vector) = mu_naught*(J(vector) + epsilon_naught * partial derivative of E(vector) with respect to t) -->
+			  <mrow>
+			    <mo>&#x2207;</mo> <!-- Gradient symbol -->
+			    <mo>&times;</mo> <!-- Cross product symbol -->
+			    <mi mathvariant="bold-italic">B</mi> <!-- Bold-italic vector B -->
+			    <mo>=</mo>
+			    <mi>&#x03BC;&#x2080;</mi> <!-- Greek letter mu naught -->
+					<mi>(</mi>
+		      <mi mathvariant="bold-italic">J</mi> <!-- Bold-italic vector J -->
+		      <mo>+</mo>
+		      <mi>&#x03B5;&#x2080;</mi> <!-- Greek letter epsilon naught -->
+		      <mfrac>
+						<mrow>
+			        <mo>&#x2202;</mo> <!-- Partial derivative symbol -->
+			        <mi mathvariant="bold-italic">E</mi> <!-- Bold-italic vector E -->
+						</mrow>
+						<mrow>
+							<mo>&part;</mo>
+							<mi>t</mi>
+		      </mfrac>
+					<mi>)</mi>
+				</mrow>
+			</math>
+		<p>One confusion I had initially is that Maxwell's equations appear to be overdetermined in the sense that they provide 8 equations (two scalar equations and two 3D vector equations)
+			for 6 unknowns. After some research I discovered that it can be shown that any system satisfying the 3rd and 4th equations above
+			also satisfies the 1st and 2nd equations.</p>
+		<p>The fascinating thing about the electromagnetic field to me is that charged particles and each of the two fields are in a constant dance with one
+		another. What I mean by this is that the positions of charges dictate what the electric and magnetic fields look like which dictates the positions of charged
+		particles which dictate what the electric and magnetic fields look like. </p>
+	 </div>
+  </body>
+
+</html>
