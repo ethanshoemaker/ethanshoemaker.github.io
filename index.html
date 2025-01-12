@@ -5,18 +5,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
 
 	<title>Ethan Shoemaker's Portfolio</title>
 	<style>
 		/* Set a background color for the entire page */
 		body {
 			background-color: #D3D3D3;
-		}
-
-		/* CSS code for the Home tab */
-		.home {
-			text-align: left;
-			font-size: 20px;
 		}
 
 		.github-icon {
@@ -46,15 +41,17 @@
 			  transform: scale(1.2);
 		}
 
-
-
 		#Home p {
-  		font-size: 18px;
+  		font-size: 16px;
 			font-family: "Courier New", Arial, sans-serif;
-			margin-left: 20px;
-			margin-top: 10px;
-			word-wrap: normal;
+			margin-left: 1%;
+			margin-right: 25%;
 		}
+
+		/* #Home p {
+			background: rgba(255, 99, 71, .5);
+  		box-shadow: 0 0 20px 20px rgb(0, 0, 0, 50%);
+		} */
 
 		.about {
 			text-align: left;
@@ -66,6 +63,7 @@
 			font-family: "Courier New", Arial, sans-serif;
 			margin-left: 20px;
 			margin-top: 10px;
+
 		}
 
 
@@ -93,11 +91,6 @@
 			margin-right:3px;
 		}
 
-		canvas {
-		  display: block;
-		  margin: 0 auto;
-		}
-
 		.tab button {
 		  font-family: "Courier New", Arial, sans-serif;
 		}
@@ -119,12 +112,6 @@
 			padding: 6px 12px;
 			border-top: none;
 		}
-
-		/* * {
-  		box-sizing: border-box;
-  		border-radius: 5px;
-		} */
-
 
 		#Resume {
 			margin-top:10px;
@@ -195,12 +182,19 @@
 	</style>
 </head>
 <body>
+
+	<div class="bubble"></div>
+	<div class="bubble"></div>
+	<div class="bubble"></div>
+	<div class="bubble"></div>
+	<div class="bubble"></div>
+	<div class="bubble"></div>
 	<!-- Create the tabs -->
 	<div class="tab">
 		<button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
 		<button class="tablinks" onclick="openTab(event, 'About')">About Me</button>
 		<button class="tablinks" onclick="openTab(event, 'Resume')">Résumé</button>
-		<button class="tablinks" onclick="openTab(event, 'MyTravels')">My Travels</button>
+		<!-- <button class="tablinks" onclick="openTab(event, 'MyTravels')">My Travels</button> -->
 		<button class="tablinks" onclick="openTab(event, 'ReadingList')">Reading List</button>
 		<button class="tablinks" onclick="openTab(event, 'AYearWithFeynman')">A Year with Feynman</button>
 		<button class="tablinks" onclick="openTab(event, 'Links')">Links</button>
@@ -209,8 +203,9 @@
 
 	<!-- Create the tab content -->
 	<div id="Home" class="tabcontent">
-		<img src="serpinski.jpg" style="float:right;width:400px;height:300px;
-		margin-left:100px;margin-right:100px;margin-top:20px;">
+		<canvas id="gravityCanvas"></canvas>
+		<!-- <img src="serpinski.jpg" style="float:right;width:400px;height:300px;
+		margin-left:100px;margin-right:100px;margin-top:20px;"> -->
 		<p>Welcome to my website! This website is a space where I can share my thoughts,
 			experiences, and interests with you. I hope you find something interesting and informative here.
 			On this homepage, you'll find a brief introduction about myself and what this website is about.<br><br>
@@ -220,20 +215,21 @@
 			and enjoy exploring new places.<br><br>In the "About Me" tab, you can learn more about my background,
 			interests, and future aspirations.<br><br>
 			In the "Résumé" tab, you can find a detailed summary of my professional experience, including my current role. You can learn about my technical skills,
-			past projects, and accomplishments.<br><br>In the "My Travels" tab, I share some of my favorite travel experiences and photos from the wonderful places I've visited.
-			I love to see new places and appreciate the diverse geopgraphy of our planet. I hope to inspire others to travel and explore more as well.
+			past projects, and accomplishments.
+			<!-- <br><br>In the "My Travels" tab, I share some of my favorite travel experiences and photos from the wonderful places I've visited.
+			I love to see new places and appreciate the diverse geopgraphy of our planet. I hope to inspire others to travel and explore more as well. -->
 			<br><br>The "Reading List" tab is a brief and very informal list of some of my favorite books, a bit about each of them, and why I enjoyed them.<br><br>Lastly, in the "Links" tab, you can find links to my LinkedIn and GitHub pages.
 			I'm always open to connecting with new people and hearing about their experiences and perspectives.
 			Thank you for visiting my website, and I hope you enjoy it.</p>
 	</div>
 
 	<div id="About" class="tabcontent">
-		<img src="IMG_1624.jpeg" alt="My Image" style="float:right;width:480px;height:639.9999px;
+		<img src="IMG_3223.jpg" alt="My Image" style="float:right;width:480px;height:639.9999px;
 		margin-left:100px;margin-right:100px;margin-top:20px;">
 		<p>Hi, I'm Ethan. I am currently a guidance, navigation, and control engineer at Millennium Space Systems. I am passionate
 		about physics, mathematics, and computer programming, so I find myself in a quite natural role. I am particularly fascinated by classical mechanics, and am trying to
 		gain a deeper understanding of Einstein's Theory of Relativity. One day I may choose to venture down the road of quantum mechanics, but that day will not come any time soon.
-		Some of my hobbies outside of work and academics include traveling, camping, hiking, and reading. These hobbies are outlined rigorously in the "My Travels" and "Reading List" tabs.<br><br>
+		Some of my hobbies outside of work and academics include traveling, camping, hiking, and reading.<br><br>
 		I grew up in what I consider to be one of the most beautiful places on earth: Carlsbad, California. Following my childhood years,
 		I attended Northern Arizona University in Flagstaff, Arizona where I earned a Bachelor of Science in Mechanical Engineering with
 		<i>cum laude</i> latin honors (I did not consider myself, by any regards, an academic throughout high school so this was a big improvement
@@ -305,7 +301,7 @@
 			</ul>
 	</div>
 
-	<div id="MyTravels" class="tabcontent">
+	<!-- <div id="MyTravels" class="tabcontent">
 	    <div class="imageContainer" style="display: flex; flex-wrap: wrap;">
 				<div style="position:relative; flex-basis: 45%; margin-right:10px; margin-bottom:10px;">
 						<img src="IMG_4646.jpeg" style="width:100%;">
@@ -400,7 +396,7 @@
 	            <div style="position:relative; bottom:-5; left:0;"><i>Flagstaff, Arizona. January 13, 2019</i></div>
 	        </div>
 	    </div>
-	</div>
+	</div> -->
 
 
 
@@ -601,7 +597,160 @@
 					window.scrollTo(0,0);
 	    });
 	</script>
+	<script>
+		let balls = [];
 
+		let desired;
+		const GOAL_DIST = 150;
+
+		let forceScale = .01;
+		const JIT = .02;
+
+		function setup() {
+			const existingCanvas = document.getElementById('gravityCanvas');
+			let cnv = createCanvas(windowWidth, windowHeight * 1.5, P2D, existingCanvas);
+  		cnv.style("position:absolute; top:0; right:0; width:1600px; height:1200px; z-index:-10;");
+  		desired = createVector(1200,250);
+			const wiggleRoom = GOAL_DIST / 3;
+		  for (let i = 0; i < 30; i++) {
+		    balls[i] = new ball(
+		      desired.x + random(-wiggleRoom, wiggleRoom),
+		      desired.y + random(-wiggleRoom, wiggleRoom)
+		    );
+		  }
+		  noStroke();
+		  fill(0);
+		  // frameRate(2);
+		}
+
+		function draw() {
+		  background(211);
+		  for (let i = 0; i < balls.length; i++) {
+		    balls[i].draw();
+		    balls[i].interactWithOtherBalls(balls, i);
+		    if (mouseIsOnCanvas()) {
+		      balls[i].runFromMouse();
+		    }
+		    if (balls[i].distanceFrom(desired) > 10) {
+		      balls[i].attractTo(desired, 250);
+		    }
+		    balls[i].move();
+		  }
+		}
+
+
+		function mousePressed() {
+		  const wiggleRoom = GOAL_DIST / 3;
+		  balls.push(new ball(mouseX, mouseY));
+		}
+
+		function randomMovement() {
+		  return createVector(
+		    random(-JIT, JIT),
+		    random(-JIT, JIT)
+		  );
+		}
+
+		function mouseIsOnCanvas() {
+		  return (mouseX > 10 && mouseX < width-10) &&
+		    (mouseY > 10 && mouseY < height-10);
+		}
+
+		function vectorSubtract(start, end) {
+		  return createVector(
+		    start.x - end.x,
+		    start.y - end.y
+		  );
+		}
+
+		function dot(v1, v2) {
+		  return (v1.x * v2.x) + (v1.y * v2.y);
+		}
+
+		function angleBetween(v1, v2) {
+		  const num = dot(v1, v2);
+		  const den = v1.mag() * v2.mag();
+		  return acos(num / den);
+		}
+
+		class ball {
+		  pos;
+		  size;
+		  velocity;
+		  forceCap = 10;
+		  attractCutoff
+
+		  constructor(x, y) {
+		    this.pos = createVector(x, y);
+		    this.velocity = createVector(0,0);
+		    this.size = random(5, 20);
+		  }
+
+		  draw() {
+		    ellipse(this.pos.x, this.pos.y, this.size, this.size);
+		  }
+
+		  move() {
+		    this.applyForce(randomMovement());
+		    this.applyFriction();
+		    if (this.velocity.mag() > .1) this.pos.add(this.velocity);
+		  }
+
+		  applyFriction() {
+		    this.velocity.mult(.99);
+		  }
+
+		  interactWithOtherBalls(others, selfId) {
+		    others.forEach((other, index) => {
+		      if (index == selfId) return;
+		      let distance = vectorSubtract(this.pos, other.pos);
+		      if (distance.mag() < GOAL_DIST) {
+		        this.repelFrom(other.pos, other.size);
+		      } else {
+		        this.attractTo(other.pos, other.size);
+		      }
+		    });
+		  }
+
+		  runFromMouse() {
+		    let mouseVector = createVector(mouseX, mouseY);
+		    let vectorToMouse = vectorSubtract(this.pos, mouseVector);
+		    if (vectorToMouse.mag() < this.size * 3) {
+		      this.repelFrom(mouseVector, 10**4 / vectorToMouse.mag());
+		    }
+		  }
+
+		  repelFrom(dilluter, strength=10) {
+		    let force = this.calculateForceToObject(dilluter, strength);
+		    force.mult(-1);
+		    this.applyForce(force);
+		  }
+
+		  attractTo(attractor, strength=10) {
+		    let force = this.calculateForceToObject(attractor, strength);
+		    this.applyForce(force);
+		  }
+
+		  calculateForceToObject(objectPosition, strength) {
+		    let difference = vectorSubtract(this.pos, objectPosition);
+		    let denom = difference.mag()**2
+		    let scale = -forceScale * (this.size*strength) / denom;
+		    difference.mult(scale);
+		    return difference;
+		  }
+
+		  applyForce(force) {
+		    if (force.mag() > this.forceCap) {
+		      force.mult(this.forceCap/force.mag());
+		    }
+		    this.velocity.add(force);
+		  }
+
+		  distanceFrom(otherPos) {
+		    return vectorSubtract(this.pos, otherPos).mag();
+		  }
+		}
+	</script>
 
 
 </body>
