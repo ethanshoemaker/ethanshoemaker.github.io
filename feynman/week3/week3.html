@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+
+	<title>Ethan Shoemaker's Portfolio</title>
+	<style>
+		/* Set a background color for the entire page */
+		body {
+			background-color: #D3D3D3;
+      margin-left:1%;
+      margin-right:20%;
+      margin-top: 10px;
+		}
+
+				/* Center the MathML element */
+		math {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  text-align: center;
+		  width: 100%;  /* or a specific width */
+		  padding-top: 20px; /* Optional: add some spacing above the MathML */
+		  padding-bottom: 20px; /* Optional: add some spacing below the MathML */
+		}
+
+		h3 {
+			font-size: 20px;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.img{
+			display: flex;
+			flex-direction: row;
+			float: left;
+		}
+
+	</style>
+</head>
+
+  <body>
+    <div>
+			<h3> <b>Week 3:</b> <i>Volume III, Chapter 1 - Quantum Behavior</i> </h3>
+			<p>I realized that I am fairly familiar with the conclusions and consequences of quantum mechanics, but a bit
+				uninformed of the mathematics, so this week I read Feynman's first chapter on quantum mechanics to gain an appreciation
+				for the underlying theory (which, ironically I won't cover in much detail here). I will likely continue this trend in the coming weeks by diving deeper into the field.
+				Feynman presents this material by describing an experiment with bullets, an experiment with water, and an experiment with subatomic particles
+				(electrons, protons, photons, etc). You will often hear folks say that an electron (or other subatmoic particle) is a particle <b>and</b> a wave.
+				This is not exactly true however, and Feynman hammers this home. He continuoously harps on the fact that subatomic particles, although they sometimes behave like a wave or sometimes behave like a particle,
+				are in fact neither a wave <b>nor</b> a particle. The chapter outlines the double slit experiment and how we expect bullets, water waves, and subatomic particles to each behave in this experiment.
+				For those of you who may be unfamiliar with the double slit experiment, imagine two walls. The first wall has two slits in it and the second wall is solid. That's actually really all you need to know for now.</p>
+				<b>An Experiment with Bullets</b>
+				<p>The first experiment uses the two walls described above and fires bullets <b>randomly</b> at the first wall. The bullets are able
+				to bounce off the edges of the slits in the first wall if their trajectory so takes them on that path. Now, imagine we cover up hole 2 and fire our gun randomly.
+				It stands to reason that the probability curve describing where the bullets end up is <b>P1</b> as seen in <b>Figure 1</b>. The maximum point of this curve is on
+				a direct line from the gun to hole 1. We repeat this exercise while covering hole 1 and, as expected, we observe <b>P2</b> as the distribution of bullets on the back wall.
+				Now, if we leave both holes open, it should be intuitive that the bullets arrive at the back wall following a distribution <b>P12=P1+P2</b>.</p>
+				<div class="container">
+					<figure>
+						<img src="bullet.png" height="200">
+						<figcaption><b>Figure 1</b></figcaption>
+					</figure>
+				</div>
+				<b>An Experiment with Water</b>
+				<p>Imagine now that our two walls are in a shallow pool and where the gun used to be there is now a motor oscillating up and down creating concentric waves.
+				Instead of counting how many bullets arrived at each spot on the back wall, we will measure the intensity of the wave at each point along the wall. Remember that
+				waves interfere with each other both constructively and destructively, this will be crucial to our understanding. Similarly to the experiment with bullets, we now cover
+				hole 2 and observe the intensity of the wave at the back wall and record it. We do the same for hole 1 and we observe wave intensity distributions <b>I1</b> and <b>I2</b>
+				as seen in <b>Figure 2</b>. Next, we uncover both holes and again record the intensity at the back wall. However, different than the bullets, the wave simultaneously
+				passes through both holes creating two different waves that interact with one another between the front and back wall before reaching the back wall. This results in the
+				wave intensity distribution <b>I12</b> which is not described by the sum of <b>I1</b> and <b>I2</b>. With that being said, it is not difficult to describe mathematically <b>I12</b>
+				in terms of <b>I1</b> and <b>I2</b>. I won't show it here though because the point is that although the results at the back wall are the same between bullets and waves when we cover one hole,
+				the results are different when both holes are left open.</p>
+				<div class="container">
+					<figure>
+						<img src="wave.png" height="200">
+						<figcaption><b>Figure 2</b></figcaption>
+					</figure>
+				</div>
+				<b>An Experiment with Electrons</b>
+				<p>Finally, we now understand how particles (bullets in our case) and waves behave when subjected to the double slit experiment. Now, we would like to know if electrons and other subatomic
+					particles are particles or waves. To detect an electron we way use a Geiger Counter. This device will produce an audible clicking sound when an electron hits it. It should be noted that the device either clicks
+					or doesn't click. There are no "half-clicks." So, we go ahead and assemble an electron gun and begin to fire it randomly at the wall. First, we cover hole 1 and then hole 2 to record our probability distributions
+					of inbound electrons at the back wall by listening for clicks by the Geiger counter. These two distributions look exactly as they did in the case of bullets and waves, but it appears the electrons are arriving as individual particles since we are hearing
+					clicks from the Geiger counter. We then open both holes and observe the distribution of electrons at the back wall and find that it
+					looks like <b>P12</b> in <b>Figure 3</b> below. Indeed, this is how electrons behave in this experiment. We are left a bit stumped because the Geiger counter makes it seem that electrons are particles, but the distribution at the back wall makes it seem as if electrons are waves. Maybe the electrons <b><i>are</b></i> particles and the distribution observed on the back wall can be explained in some manner other than by saying electrons are waves.
+					We will make the following proposition: because the Geiger counter shows that electrons are particles, that must mean that each electron passes through <b><i>only</i></b> slit 1 or slit 2, not both as a wave does.
+					In order to confirm this we will set up a device (labeled "light source" in <b>Figure 4</b>) to detect electrons and determine which slit they passed through. When we do this, something extremely strange happens and to this day, no one knows why.
+					The result is shown in <b>Figure 4</b>. As soon as we observe the electrons at the slits, the distribution at the back wall follows a pattern in-line with what we would expect for a particle. When we do not observe them
+					at the slits, the pattern at the back wall is what we would expect from a wave. In this sense, electrons are neither waves nor particles. This is where the common term "wave-particle duality" comes from.</p>
+					<div class="container">
+						<figure>
+							<img src="electron.png" height="200">
+							<figcaption><b>Figure 3</b></figcaption>
+						</figure>
+						<figure>
+							<img src="electron2.png" height="200" style="margin-left:50px">
+							<figcaption style="margin-left:50px"><b>Figure 4</b></figcaption>
+						</figure>
+					</div>
+
+
+
+	 </div>
+  </body>
+
+</html>
